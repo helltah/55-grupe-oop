@@ -1,16 +1,14 @@
-export class Dog {
-    constructor(name, furColor) {
-        this.name = name;
-        this.furColor = furColor;
+import { Pet } from "./Pet.js";
+
+export class Dog extends Pet {
+    constructor(name, furcColor) {
+        super(name, furcColor);
+        this.sound = 'au';
+        
     }
-
-    hi() {
-        return `Hi my name is ${this.name}.`;
-
-    }
-
+   
     voice() {
-        return `${this.name}: au au`
+        return `${this.name}: ${this.sound} !`;
 
 }
 }
